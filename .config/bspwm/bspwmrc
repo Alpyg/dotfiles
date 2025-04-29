@@ -20,6 +20,8 @@ bspc config gapless_monocle true
 
 # auto start
 pgrep -x sxhkd >/dev/null || sxhkd &
+/usr/lib/polkit-kde-authentication-agent-1 &
+XDG_MENU_PREFIX=arch- kbuildsycoca6 --noincremental
 killall -q polybar
 MONITOR=$polybar_monitor polybar bar &
 dunst &
