@@ -1,0 +1,22 @@
+services:
+  vaultwarden:
+    image: vaultwarden/server:latest
+    restart: unless-stopped
+    volumes:
+      - /home/nexus/.vaultwarden:/data
+    ports:
+      - 10000:80
+  crafty:
+    image: registry.gitlab.com/crafty-controller/crafty-4:latest
+    restart: unless-stopped
+    environment:
+      - TZ="America/Toronto"
+    volumes:
+      - /home/nexus/.crafty/backups:/crafty/backups
+      - /home/nexus/.crafty/logs:/crafty/logs
+      - /home/nexus/.crafty/servers:/crafty/servers
+      - /home/nexus/.crafty/config:/crafty/config
+      - /home/nexus/.crafty/import:/crafty/import
+    ports:
+      - 10002:8443
+      - 25500-25600:25500-25600
