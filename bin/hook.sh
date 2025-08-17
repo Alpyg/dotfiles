@@ -3,7 +3,7 @@
 set -euo pipefail
 
 
-base_dir="$(cd -- "$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)/.." &>/dev/null && pwd)"
+base_dir="$(realpath "$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)/..")"
 user="${SUDO_USER:-$(logname 2>/dev/null || whoami)}"
 home="$(eval echo "~$user")"
 
@@ -12,7 +12,6 @@ phase="$1"
 
 source "$base_dir/bin/utils.sh"
 
-# parse the most recent transaction from pacman.log
 mapfile -t pkgs < <(
   tac /var/log/pacman.log |
   awk '
@@ -32,5 +31,7 @@ for pkg in "${pkgs[@]}"; do
       echo "[$pkg] Running $phase"
       "$phase"
     fi
+  elif [[ -d "$pkg_dir" ]]; then
+    "${phase}_pkg_config"
   fi
 done
