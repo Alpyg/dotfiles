@@ -1,0 +1,9 @@
+@base
+
+# desktop
+bspwm
+btop
+dunst
+mangohud
+polybar
+sxhkd
