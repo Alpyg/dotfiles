@@ -22,8 +22,21 @@ mapfile -t pkgs < <(
   tac
 )
 
+find_pkg_dir() {
+  local name="$1"
+  local match
+  match=$(find "$base_dir/pkgs" -maxdepth 1 -type d -printf "%f\n" | \
+    grep -i "^${name}$" || true)
+
+  if [[ -n "$match" ]]; then
+    echo "$base_dir/pkgs/$match"
+  else
+    echo ""
+  fi
+}
+
 for pkg in "${pkgs[@]}"; do
-  pkg_dir="${base_dir}/pkgs/${pkg}"
+  pkg_dir="$(find_pkg_dir "$pkg")"
   script="${pkg_dir}/install.sh"
   if [[ -f "$script" ]]; then
     source "$script"
