@@ -22,4 +22,6 @@ bspc rule -a sun-awt-X11-XDialogPeer state=floating
 
 
 pgrep -x sxhkd >/dev/null || sxhkd &
-pgrep -x polybar >/dev/null || polybar bar &
+pgrep -x polybar >/dev/null || MONITOR=DP-1 polybar bar &
+steam
+discord
