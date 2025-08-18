@@ -36,4 +36,4 @@ done
 mapfile -t unique_pkgs < <(printf "%s\n" "${pkgs[@]}")
 
 echo "Installing packages: ${unique_pkgs[*]}"
-yay -Sy --needed --noconfirm "${unique_pkgs[@]}"
+yay -Sy --noconfirm "${unique_pkgs[@]}"
