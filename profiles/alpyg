@@ -1,4 +1,5 @@
 @base
+@apps
 
 # desktop
 bspwm
