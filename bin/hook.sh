@@ -1,8 +1,5 @@
 #!/bin/bash
 
-set -euo pipefail
-
-
 base_dir="$(realpath "$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)/..")"
 user="${SUDO_USER:-$(logname 2>/dev/null || whoami)}"
 home="$(eval echo "~$user")"
@@ -35,6 +32,8 @@ find_pkg_dir() {
   fi
 }
 
+declare -A errors
+
 for pkg in "${pkgs[@]}"; do
   pkg_dir="$(find_pkg_dir "$pkg")"
   script="${pkg_dir}/install.sh"
@@ -42,9 +41,23 @@ for pkg in "${pkgs[@]}"; do
     source "$script"
     if declare -F "$phase" >/dev/null; then
       echo "[$pkg] Running $phase"
-      "$phase"
+      if ! output=$("$phase" 2>&1); then
+        echo [$pkg] $phase failed
+        errors["$pkg"]="$output"
+      fi
     fi
   elif [[ -d "$pkg_dir" ]]; then
-    "${phase}_pkg_config"
+    if ! output=$("${phase}_pkg_config" 2>&1); then
+      echo "[$pkg] ${phase}_pkg_config failed"
+      errors["$pkg"]="$output"
+    fi
   fi
 done
+
+if (( ${#errors[@]} > 0 )); then
+  echo "=== The following packages failed during phase '$phase': ==="
+  for pkg in "${!errors[@]}"; do
+    echo "[$pkg] ${errors[$pkg]}"
+  done
+  exit 1
+fi
