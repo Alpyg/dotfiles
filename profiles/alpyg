@@ -4,7 +4,12 @@
 # desktop
 bspwm
 btop
+dmenu
 dunst
 mangohud
 polybar
 sxhkd
+
+# gpu
+nvidia-open
+nvidia-settings
