@@ -72,7 +72,8 @@
             "keepIcons": false,
             "closeAllHomeButton": false,
             "closeAllFolders": false,
-            "forceOpen": false
+            "forceOpen": false,
+            "sidebarAnim": true
         },
         "BetterGifAltText": {
             "enabled": true
@@ -111,7 +112,8 @@
             "enabled": false
         },
         "CallTimer": {
-            "enabled": true
+            "enabled": true,
+            "format": "stopwatch"
         },
         "ClearURLs": {
             "enabled": true
@@ -234,7 +236,14 @@
             "enabled": false
         },
         "ImageZoom": {
-            "enabled": true
+            "enabled": true,
+            "size": 100,
+            "zoom": 2.499999977648258,
+            "saveZoomValues": true,
+            "nearestNeighbour": false,
+            "square": false,
+            "invertScroll": true,
+            "zoomSpeed": 0.5
         },
         "ImplicitRelationships": {
             "enabled": false
@@ -264,7 +273,10 @@
             "enabled": false
         },
         "MessageLatency": {
-            "enabled": true
+            "enabled": true,
+            "latency": 2,
+            "detectDiscordKotlin": true,
+            "showMillis": false
         },
         "MessageLinkEmbeds": {
             "enabled": false
@@ -377,7 +389,8 @@
                         ]
                     }
                 ]
-            }
+            },
+            "pinOrder": 0
         },
         "PlainFolderIcon": {
             "enabled": false
@@ -467,7 +480,9 @@
             "enabled": false
         },
         "SilentTyping": {
-            "enabled": true
+            "enabled": true,
+            "isEnabled": true,
+            "showIcon": false
         },
         "SortFriendRequests": {
             "enabled": false
@@ -590,6 +605,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1755492761340
+        "settingsSyncVersion": 1755584153054
     }
 }

@@ -6,10 +6,21 @@ bspwm
 btop
 dmenu
 dunst
-mangohud
 polybar
 sxhkd
+
+# theme
+catppuccin-cursors-mocha
+kvantum
+kvantumm-qt5
 
 # gpu
 nvidia-open
 nvidia-settings
+nvidia-utils
+vulkan-tools
+
+# misc
+goverlay
+mangohud
+thunderbird

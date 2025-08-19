@@ -4,8 +4,11 @@ adobe-source-han-sans-kr-fonts
 avahi
 lightdm
 lightdm-gtk-greeter
+noto-fonts
+noto-fonts-emoji
 openssh
 pipewire
+wget
 wireplumber
 zerotier-one
 

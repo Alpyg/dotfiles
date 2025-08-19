@@ -1,0 +1,26 @@
+@base
+
+helix
+
+# lsps
+bash-language-server
+gopls
+lua-language-server
+marksman
+python-lsp-server
+rust-analyzer
+typescript-langauge-server
+yaml-language-server
+zls
+
+# tools
+bun-bin
+clang
+gcc-libc
+glibc
+lazydocker
+lazygit
+lua
+rust
+rustup
+zig
