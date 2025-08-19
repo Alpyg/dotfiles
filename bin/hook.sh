@@ -47,6 +47,7 @@ for pkg in "${pkgs[@]}"; do
       fi
     fi
   elif [[ -d "$pkg_dir" ]]; then
+    pkg="$(basename $pkg_dir)"
     if ! output=$("${phase}_pkg_config" 2>&1); then
       echo "[$pkg] ${phase}_pkg_config failed"
       errors["$pkg"]="$output"
