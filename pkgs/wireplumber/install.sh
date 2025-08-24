@@ -1,9 +1,15 @@
 #!/bin/bash
  
 install() {
-  systemctl --user enable --now wireplumber
+  echo "[${pkg}] Installing config"
+
+  ln -sf $pkg_dir/config $home/.config
+  systemctl --user enable wireplumber
 }
 
 uninstall() {
-  systemctl --user disable --now wireplumber
+  echo "[${pkg}] Uninstalling config"
+
+  rm -rf $home/.config/wireplumber
+  systemctl --user disable wireplumber
 }
