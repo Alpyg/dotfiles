@@ -4,6 +4,8 @@ helix
 
 # lsps
 bash-language-server
+deno
+dockerfile-language-server
 gopls
 lua-language-server
 marksman
@@ -14,6 +16,7 @@ yaml-language-server
 zls
 
 # tools
+anyzig-bin
 bun-bin
 clang
 gcc-libc
@@ -21,6 +24,8 @@ glibc
 lazydocker
 lazygit
 lua
-rust
+mask
 rustup
+watchexec
+zellij
 zig
