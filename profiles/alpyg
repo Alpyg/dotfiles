@@ -11,8 +11,11 @@ sxhkd
 
 # theme
 catppuccin-cursors-mocha
+catppuccin-qt5ct-git
 kvantum
 kvantumm-qt5
+qt5ct
+qt6ct
 
 # gpu
 nvidia-open

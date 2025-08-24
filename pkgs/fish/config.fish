@@ -3,5 +3,3 @@ if status is-interactive
 end
 
 zoxide init fish | source
-
-set -gx QT_STYLE_OVERRIDE kvantum
