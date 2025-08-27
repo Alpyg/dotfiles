@@ -1,0 +1,25 @@
+services:
+  klipper:
+    image: mkuf/klipper:latest
+    privileged: true
+    user: root
+    volumes:
+      - /dev:/dev
+      - ./printer.cfg:/opt/printer_data/config/printer.cfg
+      - ./run:/opt/printer_data/run
+      - ./gcodes:/opt/printer_data/gcodes
+  moonraker:
+    image: mkuf/moonraker:latest
+    user: root
+    ports:
+      - 7125:7125
+    volumes:
+      - ./moonraker.conf:/opt/printer_data/config/moonraker.conf
+      - ./run:/opt/printer_data/run
+      - ./gcodes:/opt/printer_data/gcodes
+  mainsail:
+    image: ghcr.io/mainsail-crew/mainsail
+    ports:
+      - 8080:80
+    volumes:
+      - ./mainsail.json:/usr/share/nginx/html/config.json
