@@ -1,6 +1,7 @@
 @base
 
 helix
+neovim
 
 # lsps
 bash-language-server
@@ -26,6 +27,7 @@ lazygit
 lua
 mask
 rustup
+tokei
 watchexec
 zellij
-zig
+# zig
