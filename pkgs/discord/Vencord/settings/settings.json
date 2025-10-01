@@ -51,7 +51,7 @@
             "enabled": false
         },
         "AlwaysAnimate": {
-            "enabled": true
+            "enabled": false
         },
         "AlwaysExpandRoles": {
             "enabled": true
@@ -73,7 +73,8 @@
             "closeAllHomeButton": false,
             "closeAllFolders": false,
             "forceOpen": false,
-            "sidebarAnim": true
+            "sidebarAnim": true,
+            "closeOthers": false
         },
         "BetterGifAltText": {
             "enabled": true
@@ -83,7 +84,8 @@
         },
         "BetterNotesBox": {
             "enabled": true,
-            "hide": false
+            "hide": false,
+            "noSpellCheck": false
         },
         "BetterRoleContext": {
             "enabled": true
@@ -238,7 +240,7 @@
         "ImageZoom": {
             "enabled": true,
             "size": 1258.7344469270492,
-            "zoom": 1,
+            "zoom": 2.499999977648258,
             "saveZoomValues": true,
             "nearestNeighbour": false,
             "square": false,
@@ -283,7 +285,7 @@
         },
         "MessageLogger": {
             "enabled": true,
-            "collapseDeleted": false,
+            "collapseDeleted": true,
             "deleteStyle": "text",
             "ignoreBots": true,
             "ignoreSelf": true,
@@ -483,7 +485,8 @@
         "SilentTyping": {
             "enabled": true,
             "isEnabled": true,
-            "showIcon": false
+            "showIcon": false,
+            "contextMenu": true
         },
         "SortFriendRequests": {
             "enabled": false
@@ -519,7 +522,10 @@
             "enabled": false
         },
         "TypingIndicator": {
-            "enabled": false
+            "enabled": true,
+            "includeMutedChannels": false,
+            "includeCurrentChannel": true,
+            "indicatorMode": 3
         },
         "TypingTweaks": {
             "enabled": false
@@ -609,6 +615,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1755931974592
+        "settingsSyncVersion": 1759007006934
     }
 }

@@ -23,7 +23,8 @@ bspc rule -a sun-awt-X11-XDialogPeer state=floating
 
 ~/.dotfiles/bin/xrandr.sh &
 pgrep -x sxhkd >/dev/null || sxhkd &
-pgrep -x polybar >/dev/null || MONITOR=DP-1 polybar bar &
+pgrep -x polybar >/dev/null || MONITOR=DP-3 polybar bar &
 pgrep -x dunst >/dev/null || dunst &
+pgrep -x picom >/dev/null || picom &
 steam &
 discord &
