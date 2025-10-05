@@ -1,0 +1,40 @@
+{
+  "layer": "top",
+  "position": "top",
+  "autohide": true,
+  "autohide-blocked": false,
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  "modules-left": [],
+  "modules-center": [],
+  "modules-right": ["memory", "cpu", "temperature", "pulseaudio", "clock"],
+  "clock": {
+    "timezone": "America/Montreal",
+    "format": "{:%I:%M  %d, %m}",
+    "tooltip-format": "{calendar}",
+    "calendar": {
+      "mode": "month",
+    },
+  },
+  "memory": {
+    "format": "{}% 󰍛",
+    "tooltip": false,
+  },
+  "cpu": {
+    "format": "{usage}% ",
+    "tooltip": false,
+  },
+  "temperature": {
+    "format": "{temperatureC}°C {icon}",
+    "tooltip": false,
+  },
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-muted": " {format_source}",
+    "format-icons": {
+      "default": ["", ""],
+    },
+    "tooltip": false,
+  },
+}
