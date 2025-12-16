@@ -1,7 +1,6 @@
-@base
-
 helix
 neovim
+github-cli
 
 # lsps
 bash-language-server
@@ -22,7 +21,7 @@ bun-bin
 clang
 gcc-libc
 glibc
-lazydocker
+lazydocker-bin
 lazygit
 lua
 mask

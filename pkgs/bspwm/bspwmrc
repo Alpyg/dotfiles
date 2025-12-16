@@ -15,15 +15,13 @@ bspc config window_gap 5
 
 bspc rule -r '*'
 
-
 # java gui fixes
 export _JAVA_AWT_WM_NONREPARENTING=1
 bspc rule -a sun-awt-X11-XDialogPeer state=floating
 
-
 ~/.dotfiles/bin/xrandr.sh &
 pgrep -x sxhkd >/dev/null || sxhkd &
-pgrep -x polybar >/dev/null || MONITOR=DP-3 polybar bar &
+pgrep -x polybar >/dev/null || MONITOR=HDMI-0 polybar bar &
 pgrep -x dunst >/dev/null || dunst &
 pgrep -x picom >/dev/null || picom &
 steam &

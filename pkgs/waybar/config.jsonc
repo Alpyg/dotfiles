@@ -4,6 +4,7 @@
   "autohide": true,
   "autohide-blocked": false,
   "exclusive": true,
+  "output": "HDMI-A-1",
   "passthrough": false,
   "gtk-layer-shell": true,
   "modules-left": [],

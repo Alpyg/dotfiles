@@ -4,7 +4,7 @@ install() {
   cp /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf.bak
   sed -i \
     -e 's/^#autologin-user=.*/autologin-user=alpyg/' \
-    -e 's/^#autologin-session=.*/autologin-session=Hyprland/' \
+    -e 's/^#autologin-session=.*/autologin-session=bspwm/' \
     /etc/lightdm/lightdm.conf
 
   systemctl enable --now lightdm

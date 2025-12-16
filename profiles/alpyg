@@ -1,5 +1,6 @@
 @base
 @apps
+@games
 
 # desktop
 bspwm
@@ -24,6 +25,4 @@ nvidia-utils
 vulkan-tools
 
 # misc
-goverlay
-mangohud
 thunderbird
