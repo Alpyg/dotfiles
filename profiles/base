@@ -2,12 +2,11 @@
 adobe-source-han-sans-jp-fonts
 adobe-source-han-sans-kr-fonts
 avahi
-lightdm
-lightdm-gtk-greeter
 noto-fonts
 noto-fonts-emoji
 openssh
 pipewire
+sddm
 wget
 wireplumber
 zerotier-one
@@ -28,6 +27,7 @@ helix
 kate
 kitty
 ncurses
+neovim
 p7zip
 partitionmanager
 ripgrep-all
