@@ -1,0 +1,19 @@
+services:
+  gitea:
+    image: docker.gitea.com/gitea:latest
+    container_name: gitea
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+      - GITEA__database__DB_TYPE=sqlite3
+    restart: always
+    volumes:
+      - gitea:/data
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "30000:3000"
+      - "2222:22"
+
+volumes:
+  gitea:
+    driver: local
