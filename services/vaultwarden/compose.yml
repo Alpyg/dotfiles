@@ -1,0 +1,12 @@
+services:
+  gitea:
+    image: vaultwarden/server:latest-alpine
+    container_name: vaultwarden
+    volumes:
+      - vaultwarden:/data
+    ports:
+      - "8222:80"
+
+volumes:
+  vaultwarden:
+    driver: local
