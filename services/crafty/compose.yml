@@ -1,0 +1,16 @@
+services:
+  gitea:
+    image: registry.gitlab.com/crafty-controller/crafty-4:latest
+    container_name: crafty
+    environment:
+      - TZ=Etc/UTC
+    restart: always
+    volumes:
+      - ~/crafty/backups:/crafty/backups
+      - ~/crafty/config/:/crafty/config
+      - ~/crafty/import:/crafty/import
+      - ~/crafty/logs:/crafty/logs
+      - ~/crafty/servers:/crafty/servers
+    ports:
+      - "8443:8443"
+      - "25500-25600:25500-25600"

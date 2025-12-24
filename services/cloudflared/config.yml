@@ -4,7 +4,11 @@ credentials-file: /etc/cloudflared/nexus.json
 ingress:
   - hostname: vaultwarden.alpyg.dev
     service: http://localhost:8222
+
   - hostname: gitea.alpyg.dev
     service: http://localhost:30000
+
+  - hostname: crafty.alpyg.dev
+    service: https://localhost:8443
 
   - service: http_status:404
