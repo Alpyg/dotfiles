@@ -1,0 +1,8 @@
+services:
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared
+    network_mode: host
+    volumes:
+      - ./:/etc/cloudflared/:ro
+    command: tunnel --config /etc/cloudflared/config.yml run
