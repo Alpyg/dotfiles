@@ -1,0 +1,60 @@
+(defvar eww "exec $HOME/.nix-profile/bin/eww -c $HOME/.nixfiles/modules/home-manager/eww/config")
+
+
+(defwidget bar []
+  (box :class "bar"
+       :orientation "h"
+    (system)))
+
+
+(defwidget system []
+  (box :class "system"
+       :orientation "h"
+       :space-evenly false
+       :halign "end"
+       :spacing 8
+    (volume)
+    (time)))
+
+
+(defwidget time []
+  (button :class "badge time"
+          :onclick "${eww} update show_seconds=${!show_seconds}"
+          :timeout "1s"
+    (label :text {show_seconds ? hms : hm})))
+(defpoll hm :interval "1s" "date '+%H:%M'")
+(defpoll hms :interval "1s" "date '+%H:%M:%S'")
+(defvar show_seconds false)
+
+
+(defwidget volume []
+  (eventbox :onscroll "scripts/volume.sh {}"
+    (box :class "badge volume"
+         :orientation "h"
+         :space-evenly false
+         :spacing 5
+      (label :class "volume_label"
+             :justify "center"
+             :text "${round(current_volume, 0)}")
+      (image :class "volume_icon"
+             :path "assets/volume-${round(min(4, (0.35 + current_volume / 33)), 0)}.svg"))))
+(defpoll current_volume :interval "0.1s"
+                        :initial 0
+                        :run-while show_volume
+                        "scripts/volume.sh")
+
+
+(defwindow bar
+  :monitor 0
+  :geometry (geometry
+              :x "0"
+              :y "0"
+              :width "100%"
+              :height "32px"
+              :anchor "center top")
+  :stacking "fg"
+  :reserve (struts :distance "32px" :side "top")
+  :windowtype "dock"
+  :exclusive true
+  :wm-ignore false
+  (bar))

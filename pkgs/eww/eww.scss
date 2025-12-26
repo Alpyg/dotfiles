@@ -1,0 +1,24 @@
+$background: #8aadf4;
+$foreground: #181825;
+
+* {
+  all: unset;
+  color: $foreground;
+  font-weight: normal;
+  font-size: 1.1rem;
+}
+
+.bar {
+  margin: 4px 4px;
+  margin-bottom: 2px;
+}
+
+.badge {
+  padding: 2px 8px;
+  background-color: $background;
+  border-radius: 100px;
+}
+
+.volume_icon {
+  padding: 0;
+}
