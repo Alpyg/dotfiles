@@ -13,6 +13,7 @@
        :space-evenly false
        :halign "end"
        :spacing 8
+    (ram)
     (volume)
     (time)))
 
@@ -30,7 +31,6 @@
 (defwidget volume []
   (eventbox :onscroll "scripts/volume.sh {}"
     (box :class "badge volume"
-         :orientation "h"
          :space-evenly false
          :spacing 5
       (label :class "volume_label"
@@ -42,6 +42,17 @@
                         :initial 0
                         :run-while show_volume
                         "scripts/volume.sh")
+
+(defwidget ram []
+  (box :class "badge ram"
+       :space-evenly false
+       :spacing 5
+    (label :class "ram_label"
+           :justify "center"
+           :text "${round(EWW_RAM.used_mem_perc, 0)}%")
+    (image :class "ram_icon"
+           :path "assets/ram.svg")
+  ))
 
 
 (defwindow bar
