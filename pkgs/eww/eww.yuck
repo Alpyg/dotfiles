@@ -14,6 +14,7 @@
        :halign "end"
        :spacing 8
     (ram)
+    (cpu)
     (volume)
     (time)))
 
@@ -43,6 +44,17 @@
                         :run-while show_volume
                         "scripts/volume.sh")
 
+(defwidget cpu []
+  (box :class "badge ram"
+       :space-evenly false
+       :spacing 5
+    (label :class "ram_label"
+           :justify "center"
+           :text "${round(EWW_CPU.avg, 0)}%")
+    (image :class "ram_icon"
+           :path "assets/cpu.svg")
+  ))
+
 (defwidget ram []
   (box :class "badge ram"
        :space-evenly false
@@ -53,7 +65,6 @@
     (image :class "ram_icon"
            :path "assets/ram.svg")
   ))
-
 
 (defwindow bar
   :monitor 0
