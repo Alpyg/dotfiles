@@ -179,7 +179,13 @@
             "enabled": false
         },
         "FakeNitro": {
-            "enabled": false
+            "enabled": true,
+            "enableStickerBypass": true,
+            "enableStreamQualityBypass": true,
+            "enableEmojiBypass": true,
+            "transformEmojis": true,
+            "transformStickers": true,
+            "transformCompoundSentence": false
         },
         "FakeProfileThemes": {
             "enabled": false
@@ -241,7 +247,7 @@
         "ImageZoom": {
             "enabled": true,
             "size": 1258.7344469270492,
-            "zoom": 2.499999977648258,
+            "zoom": 2.7999999999999994,
             "saveZoomValues": true,
             "nearestNeighbour": false,
             "square": false,
@@ -607,6 +613,9 @@
         },
         "AutoDNDWhilePlaying": {
             "enabled": false
+        },
+        "MoreQuickReactions": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -619,7 +628,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1765731309248
+        "settingsSyncVersion": 1772861648077
     },
     "uiElements": {
         "chatBarButtons": {},

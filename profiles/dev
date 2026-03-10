@@ -17,7 +17,7 @@ zls
 
 # tools
 anyzig-bin
-bun-bin
+bun
 clang
 gcc-libc
 glibc

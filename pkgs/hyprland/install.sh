@@ -1,13 +1,13 @@
 #!/bin/bash
 
 install() {
-  echo "[${pkg}] Installing config"
+	echo "[${pkg}] Installing config"
 
-  ln -sf $pkg_dir/hypr $home/.config
+	ln -sf $pkg_dir/hypr $home/.config
 }
 
 uninstall() {
-  echo "[${pkg}] Uninstalling config"
+	echo "[${pkg}] Uninstalling config"
 
-  rm -rf $home/.config/hypr
+	rm -rf $home/.config/hypr
 }
