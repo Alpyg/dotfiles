@@ -185,7 +185,11 @@
             "enableEmojiBypass": true,
             "transformEmojis": true,
             "transformStickers": true,
-            "transformCompoundSentence": false
+            "transformCompoundSentence": false,
+            "emojiSize": 48,
+            "hyperLinkText": "{{NAME}}",
+            "useHyperLinks": true,
+            "disableEmbedPermissionCheck": false
         },
         "FakeProfileThemes": {
             "enabled": false
@@ -247,7 +251,7 @@
         "ImageZoom": {
             "enabled": true,
             "size": 1258.7344469270492,
-            "zoom": 2.7999999999999994,
+            "zoom": 4.6,
             "saveZoomValues": true,
             "nearestNeighbour": false,
             "square": false,
@@ -302,9 +306,6 @@
             "logEdits": true,
             "logDeletes": true,
             "inlineEdits": true
-        },
-        "MessageTags": {
-            "enabled": false
         },
         "MutualGroupDMs": {
             "enabled": false
@@ -616,6 +617,33 @@
         },
         "MoreQuickReactions": {
             "enabled": false
+        },
+        "CustomCommands": {
+            "enabled": false
+        },
+        "NoDefaultHangStatus": {
+            "enabled": false
+        },
+        "WebRichPresence (arRPC)": {
+            "enabled": false
+        },
+        "CharacterCounter": {
+            "enabled": false
+        },
+        "WebKeybinds": {
+            "enabled": true
+        },
+        "WebScreenShareFixes": {
+            "enabled": true
+        },
+        "DisableDeepLinks": {
+            "enabled": true
+        },
+        "WebContextMenus": {
+            "enabled": true
+        },
+        "NoMiddleClickPaste": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -628,7 +656,7 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1772861648077
+        "settingsSyncVersion": 1778563883214
     },
     "uiElements": {
         "chatBarButtons": {},
