@@ -314,6 +314,31 @@ oxwm.key.chord({
 	{ {}, "T" },
 }, oxwm.spawn_terminal())
 
+oxwm.key.chord({
+	{ { modkey }, "Space" },
+	{ {}, "D" },
+}, oxwm.spawn("discord"))
+
+oxwm.key.chord({
+	{ { modkey }, "Space" },
+	{ {}, "E" },
+}, oxwm.spawn("dolphin"))
+
+oxwm.key.chord({
+	{ { modkey }, "Space" },
+	{ {}, "B" },
+}, oxwm.spawn("firefox"))
+
+oxwm.key.chord({
+	{ { modkey }, "Space" },
+	{ {}, "M" },
+}, oxwm.spawn("thunderbird"))
+
+oxwm.key.chord({
+	{ { modkey }, "Space" },
+	{ {}, "P" },
+}, oxwm.spawn("prismlauncher"))
+
 -------------------------------------------------------------------------------
 -- Autostart
 -------------------------------------------------------------------------------
